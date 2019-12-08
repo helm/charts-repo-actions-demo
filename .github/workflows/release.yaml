@@ -21,6 +21,3 @@ jobs:
         uses: scottrigby/chart-releaser-action@master
         env:
           CR_TOKEN: "${{ secrets.CR_TOKEN }}"
-        with:
-          owner: scottrigby
-          repo: charts-repo-test
