@@ -1,0 +1,27 @@
+name: Release Charts
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Configure Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email noreply@github.com
+
+      - name: Run chart-releaser
+        uses: scottrigby/chart-releaser-action@master
+        # GitHub Auth Token only needed for private repos
+        # env:
+        #   CR_TOKEN: "${{ secrets.CR_TOKEN }}"
+        with:
+          owner: scottrigby
+          repo: charts-repo-test

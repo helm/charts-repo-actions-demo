@@ -1,0 +1,25 @@
+name: Lint and Test Charts
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run chart-testing (lint)
+        uses: scottrigby/chart-testing-action@master
+        with:
+          command: lint
+
+      - name: Create kind cluster
+        uses: scottrigby/kind-action@master
+        with:
+          installLocalPathProvisioner: true
+
+      - name: Run chart-testing (install)
+        uses: scottrigby/chart-testing-action@master
+        with:
+          command: install
