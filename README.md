@@ -1,6 +1,6 @@
 # Charts Repo Test
 
-This git project tests Helm actions for testing and hosting chart repositories on GitHub Pages.
+Example project to demo testing and hosting chart repositories on GitHub Pages using Actions.
 
 ## Actions
 
