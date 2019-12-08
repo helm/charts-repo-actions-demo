@@ -9,15 +9,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Run chart-testing (lint)
-        uses: scottrigby/chart-testing-action@master
-        with:
-          command: lint
-
       - name: Create kind cluster
         uses: scottrigby/kind-action@master
         with:
           installLocalPathProvisioner: true
+
+      - name: Run chart-testing (lint)
+        uses: scottrigby/chart-testing-action@master
+        with:
+          command: lint
 
       - name: Run chart-testing (install)
         uses: scottrigby/chart-testing-action@master
