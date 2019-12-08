@@ -1,4 +1,4 @@
-# Charts Repo Test
+# Charts Repo Actions Demo
 
 Example project to demo testing and hosting a chart repository with GitHub Pages and Actions.
 
