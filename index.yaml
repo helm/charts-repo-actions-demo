@@ -3,6 +3,21 @@ entries:
   alpine:
   - apiVersion: v1
     appVersion: "3.9"
+    created: "2019-12-08T04:08:12.301238062Z"
+    description: Deploy a basic Alpine Linux pod
+    digest: 9b73a54e1bf5fd44a164929c3e1e7f7f7fbacb9f1fc18f1c77b64f6ae68b0a37
+    home: https://helm.sh/helm
+    maintainers:
+    - email: email@example.com
+      name: Name
+    name: alpine
+    sources:
+    - https://github.com/helm/helm
+    urls:
+    - https://github.com/scottrigby/charts-repo-test/releases/download/alpine-0.1.2/alpine-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    appVersion: "3.9"
     created: "2019-12-08T02:59:01.234895862Z"
     description: Deploy a basic Alpine Linux pod
     digest: 693354c9b88f13bd53c1798bcf3cea4cf745926c82e74e6ef0a532aad11f2e90
@@ -14,6 +29,21 @@ entries:
     - https://github.com/scottrigby/charts-repo-test/releases/download/alpine-0.1.1/alpine-0.1.1.tgz
     version: 0.1.1
   example:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2019-12-08T04:08:12.428337515Z"
+    description: A Helm chart for Kubernetes
+    digest: 22146a53e8df4322eb735333a82915fb9ed46b96428dfceb23010620ab41e050
+    home: https://helm.sh/helm
+    maintainers:
+    - email: email@example.com
+      name: Name
+    name: example
+    sources:
+    - https://github.com/helm/helm
+    urls:
+    - https://github.com/scottrigby/charts-repo-test/releases/download/example-0.1.2/example-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
     created: "2019-12-08T02:57:22.079029976Z"
