@@ -36,7 +36,7 @@ You can automatically test and host your own chart repository with GitHub Pages 
 The above [prerequisites](#prerequisites) _must_ be complete before the steps below, or your charts' initial versions won't be released.
 
 1. Use the `master` branch for all of the below, if you wish to use the Actions workflow files as-is
-1. Copy the `.github/workflows` files from this project to yours ()
+1. Copy the `.github/workflows` files from this project to yours
 1. Add your charts to a parent directory in the project (`/charts` is most straightforward, as it's the default. To change this see [helm/chart-testing > configuration > chart-dirs](https://github.com/helm/chart-testing#configuration))
 
 ### Results
