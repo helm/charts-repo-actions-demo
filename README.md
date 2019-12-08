@@ -25,7 +25,7 @@ You may emulate this project to host your own chart repository.
 
 * A GitHub project to use for your Charts repo (a clean project is most straightforward, as there won't be release cluttering or possible `gh-pages` conflicts)
 * A branch to use for GitHub Pages (`gh-pages` is most straightforward, as it's the default and requires no configuration)
-* A secret named `CR_TOKEN` with the value of a GitHub [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token)
+* A project [Secret](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets#creating-encrypted-secrets) named `CR_TOKEN` with the value of a GitHub [personal access token](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line#creating-a-token)
   * The token must have `repo` scope
   * The token's user must have write access to the project
   * To mitigate risk you may wish to limit the token to a single project by creating a [machine user](https://developer.github.com/v3/guides/managing-deploy-keys/#machine-users)
