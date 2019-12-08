@@ -1,5 +1,18 @@
 apiVersion: v1
 entries:
+  alpine:
+  - apiVersion: v1
+    appVersion: "3.9"
+    created: "2019-12-08T02:59:01.234895862Z"
+    description: Deploy a basic Alpine Linux pod
+    digest: 693354c9b88f13bd53c1798bcf3cea4cf745926c82e74e6ef0a532aad11f2e90
+    home: https://helm.sh/helm
+    name: alpine
+    sources:
+    - https://github.com/helm/helm
+    urls:
+    - https://github.com/scottrigby/charts-repo-test/releases/download/alpine-0.1.1/alpine-0.1.1.tgz
+    version: 0.1.1
   example:
   - apiVersion: v1
     appVersion: "1.0"
