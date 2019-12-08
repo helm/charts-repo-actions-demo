@@ -17,9 +17,9 @@ Currently `master` tests [apiVersion: v1](https://helm.sh/docs/topics/charts/#th
 * `charts/example`: Generated from Helm 2 `helm create charts/example`
 * `charts/alpine`: Copied from Helm [testcharts/alpine](https://github.com/helm/helm/tree/master/cmd/helm/testdata/testcharts/alpine)
 
-## How to Emulate
+## How-To
 
-You may emulate this project to host your own chart repository.
+You can automatically test and host your own chart repository with GitHub Pages and Actions by following these steps.
 
 ### Prerequisites
 
