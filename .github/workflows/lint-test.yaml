@@ -9,7 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Create k8s Kind Cluster
+      - name: Create kind cluster
         uses: helm/kind-action@v1.0.0-alpha.2
         with:
           installLocalPathProvisioner: true
