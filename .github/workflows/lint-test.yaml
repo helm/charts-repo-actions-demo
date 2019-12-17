@@ -15,7 +15,7 @@ jobs:
           installLocalPathProvisioner: true
 
       - name: Run chart-testing (lint)
-        uses: helm/chart-testing-action@master
+        uses: helm/chart-testing-action@v1.0.0-alpha.1
         with:
           command: lint
 
