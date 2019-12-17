@@ -10,17 +10,19 @@ jobs:
         uses: actions/checkout@v1
 
       # To-do: make this more robust. Perhaps with 'ct list-changed'.
+      # See https://github.com/actions/toolkit/issues/96
       - name: Check changed charts
+        id: check_charts
         run: |
           if [ -z "$(git diff --find-renames --name-only "$(git rev-parse --abbrev-ref HEAD)" remotes/origin/master -- charts)" ]; then
-            echo "::set-output name=charts_changed::true"
+            echo "::set-output name=changed::true"
           fi
 
       - name: Create kind cluster
         uses: helm/kind-action@v1.0.0-alpha.2
         with:
           installLocalPathProvisioner: true
-        if: steps.check-changed-charts.outputs.charts_changed == true
+        if: steps.check_charts.outputs.changed == true
 
       - name: Run chart-testing (lint)
         uses: helm/chart-testing-action@v1.0.0-alpha.1
