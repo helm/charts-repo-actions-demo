@@ -16,12 +16,7 @@ jobs:
         id: check_charts
         run: |
           changes=$(git diff --find-renames --name-only "$(git rev-parse --abbrev-ref HEAD)" remotes/origin/master -- charts)
-          if [ -n "$changes" ]; then
-            echo "There are chart changes"
-            echo "::set-output name=changed::true"
-          else
-            echo "No chart changes"
-          fi
+          [ -n "$changes" ] && echo "::set-output name=changed::true" || echo "No chart changes"
 
       - name: Create kind cluster
         uses: helm/kind-action@v1.0.0-alpha.2
