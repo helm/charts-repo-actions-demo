@@ -9,17 +9,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      # To-do: make this more robust. Perhaps with 'ct list-changed'.
-      # See https://github.com/actions/toolkit/issues/96
+      # Only build a kind cluster if there are chart changes to test.
+      # To-do: make this more robust. Perhaps with 'ct list-changed', so we can
+      # get remote branch and charts dir from ct config.
       - name: Check changed charts
         id: check_charts
         run: |
-          # Test assumptions:
-          git diff --find-renames --name-only "$(git rev-parse --abbrev-ref HEAD)" remotes/origin/master -- charts
-          git rev-parse --abbrev-ref HEAD
-          git remote -v
-          if [ -z "$(git diff --find-renames --name-only "$(git rev-parse --abbrev-ref HEAD)" remotes/origin/master -- charts)" ]; then
+          changes=$(git diff --find-renames --name-only "$(git rev-parse --abbrev-ref HEAD)" remotes/origin/master -- charts)
+          if [ -n "$changes" ]; then
+            echo "There are chart changes"
             echo "::set-output name=changed::true"
+          else
+            echo "No chart changes"
           fi
 
       - name: Create kind cluster
