@@ -28,6 +28,22 @@ entries:
     urls:
     - https://github.com/scottrigby/charts-repo-test/releases/download/alpine-0.1.1/alpine-0.1.1.tgz
     version: 0.1.1
+  dependencies:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2019-12-22T18:38:04.796680322Z"
+    description: Chart to test dependencies
+    digest: 4cbf8d8b1181ed91a83a2b7ae6ce7b7ff2ce3d66716c1cebc4093b9763def061
+    home: https://github.com/helm/charts-repo-actions-demo
+    maintainers:
+    - email: email@example.com
+      name: Name
+    name: dependencies
+    sources:
+    - https://github.com/helm/charts-repo-actions-demo
+    urls:
+    - https://github.com/helm/charts-repo-actions-demo/releases/download/dependencies-0.1.0/dependencies-0.1.0.tgz
+    version: 0.1.0
   example:
   - apiVersion: v1
     appVersion: "1.0"
