@@ -15,11 +15,11 @@ jobs:
           install_local_path_provisioner: true
 
       - name: Run chart-testing (lint)
-        uses: helm/chart-testing-action@v1.0.0-alpha.1
+        uses: helm/chart-testing-action@v1.0.0-alpha.2
         with:
           command: lint
 
       - name: Run chart-testing (install)
-        uses: helm/chart-testing-action@v1.0.0-alpha.1
+        uses: helm/chart-testing-action@v1.0.0-alpha.2
         with:
           command: install
