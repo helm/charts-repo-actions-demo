@@ -18,6 +18,7 @@ Currently `master` tests [apiVersion: v1](https://helm.sh/docs/topics/charts/#th
 
 * `charts/example`: Generated from Helm 2 `helm create charts/example`
 * `charts/alpine`: Copied from Helm [testcharts/alpine](https://github.com/helm/helm/tree/master/cmd/helm/testdata/testcharts/alpine)
+* `charts/dependencies`: Simple chart to test dependencies from an external Charts repo
 
 ## How-To
 
