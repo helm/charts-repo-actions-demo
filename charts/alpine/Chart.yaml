@@ -8,4 +8,4 @@ maintainers:
 name: alpine
 sources:
   - https://github.com/helm/helm
-version: 0.1.2
+version: 0.1.3
