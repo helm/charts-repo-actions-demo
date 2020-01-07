@@ -9,25 +9,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      # Only build a kind cluster if there are chart changes to test.
-      # To-do: make this more robust. Perhaps with 'ct list-changed', so we can
-      # get remote branch and charts dir from ct config.
-      - name: Check changed charts
-        id: check_charts
-        run: |
-          changes=$(git diff --find-renames --name-only "$(git rev-parse --abbrev-ref HEAD)" remotes/origin/master -- charts)
-          [ -n "$changes" ] && echo "::set-output name=changed::true" || echo "No chart changes"
+      - name: Run chart-testing (lint)
+        id: lint
+        uses: scottrigby/chart-testing-action@help-kind-run-only-if-changed
+        with:
+          command: lint
 
       - name: Create kind cluster
         uses: helm/kind-action@v1.0.0-alpha.3
         with:
           install_local_path_provisioner: true
-        if: steps.check_charts.outputs.changed == 'true'
-
-      - name: Run chart-testing (lint)
-        uses: helm/chart-testing-action@v1.0.0-alpha.2
-        with:
-          command: lint
+        if: steps.lint.outputs.changed == 'true'
 
       - name: Run chart-testing (install)
         uses: helm/chart-testing-action@v1.0.0-alpha.2
