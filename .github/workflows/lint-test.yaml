@@ -11,7 +11,7 @@ jobs:
 
       - name: Run chart-testing (lint)
         id: lint
-        uses: scottrigby/chart-testing-action@help-kind-run-only-if-changed
+        uses: helm/chart-testing-action@v1.0.0-alpha.3
         with:
           command: lint
 
@@ -22,6 +22,6 @@ jobs:
         if: steps.lint.outputs.changed == 'true'
 
       - name: Run chart-testing (install)
-        uses: helm/chart-testing-action@v1.0.0-alpha.2
+        uses: helm/chart-testing-action@v1.0.0-alpha.3
         with:
           command: install
