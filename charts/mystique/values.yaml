@@ -1,0 +1,10 @@
+# Default values for mystique.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+manifests:
+  - name: mystique
+    apiVersion: v1
+    kind: ConfigMap
+    body:
+      data:
+        url: www.marvel.com

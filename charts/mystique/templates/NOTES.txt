@@ -1,0 +1,7 @@
+The Mystique Chart has deployed the following resources:
+
+{{- $name := include "mystique.fullname" . }}
+{{- $namespace := .Release.Namespace }}
+{{- range .Values.manifests }}
+- $ kubectl -n {{ default $namespace .namespace }} get {{ .kind | lower }} {{ .name }}
+{{- end }}

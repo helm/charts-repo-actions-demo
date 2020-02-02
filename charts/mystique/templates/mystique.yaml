@@ -1,0 +1,29 @@
+{{- $name := include "mystique.fullname" . }}
+{{- $labels := ( include "mystique.labels" . | indent 4 ) }}
+{{- $namespace := .Release.Namespace }}
+{{- range .Values.manifests }}
+---
+apiVersion: {{ .apiVersion }}
+kind: {{ .kind }}
+metadata:
+  name: {{ .name }}
+  namespace: {{ default $namespace .namespace }}
+  labels:
+{{ $labels }}
+{{- with .labels }}
+{{ tpl (toYaml .) $ | indent 4 }}
+{{- end }}
+{{- if .annotations }}
+  annotations:
+{{- with .annotations }}
+{{ tpl (toYaml .) $ | indent 4 }}
+{{- end }}
+{{- end }}
+{{- if .spec }}
+spec:
+{{ tpl (toYaml .spec) $ | indent 2 }}
+{{- end }}
+{{- if .body }}
+{{ tpl (toYaml .body) $ }}
+{{- end }}
+{{- end }}
