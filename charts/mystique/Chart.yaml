@@ -3,3 +3,6 @@ appVersion: "1.0"
 description: A helm chart for deploying raw kubernetes resources.
 name: mystique
 version: 0.1.0
+home: https://github.com/paulczar/charts
+sources:
+- https://github.com/paulczar/charts
