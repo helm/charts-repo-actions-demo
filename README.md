@@ -12,13 +12,14 @@ Example project to demo testing and hosting a chart repository with GitHub Pages
 
 ## Project Status
 
-Currently `master` tests [apiVersion: v1](https://helm.sh/docs/topics/charts/#the-apiversion-field) charts (installable by both Helm 2 and 3), and not for `apiVersion: v2` charts (installable by Helm 3 only).
+`master` supports Helm 3 only, i. e. both `v1` and `v2` API version](https://helm.sh/docs/topics/charts/#the-apiversion-field) charts are installable.
 
 ## Chart Sources
 
-* `charts/example`: Generated from Helm 2 `helm create charts/example`
-* `charts/alpine`: Copied from Helm [testcharts/alpine](https://github.com/helm/helm/tree/master/cmd/helm/testdata/testcharts/alpine)
-* `charts/dependencies`: Simple chart to test dependencies from an external Charts repo
+* `charts/example-v1`: Sample chart with API version v1
+* `charts/example-v2`: Sample chart with API version v2
+* `charts/dependencies-v1`: Simple chart with API version v1 to test dependencies from an external Charts repo
+* `charts/dependencies-v2`: Simple chart with API version v2 to test dependencies from an external Charts repo
 
 ## How-To
 
