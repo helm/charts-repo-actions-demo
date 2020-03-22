@@ -5,7 +5,7 @@ home: https://helm.sh/helm
 maintainers:
   - email: email@example.com
     name: Name
-name: alpine
+name: example-v1
 sources:
   - https://github.com/helm/helm
-version: 0.1.2
+version: 0.1.3
