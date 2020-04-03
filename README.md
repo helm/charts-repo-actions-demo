@@ -12,7 +12,7 @@ Example project to demo testing and hosting a chart repository with GitHub Pages
 
 ## Project Status
 
-`master` supports Helm 3 only, i. e. both `v1` and `v2` API version](https://helm.sh/docs/topics/charts/#the-apiversion-field) charts are installable.
+`master` supports Helm 3 only, i. e. both `v1` and `v2` [API version](https://helm.sh/docs/topics/charts/#the-apiversion-field) charts are installable.
 
 ## Chart Sources
 
