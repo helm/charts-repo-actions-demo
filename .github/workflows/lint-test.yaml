@@ -14,7 +14,8 @@ jobs:
 
       - name: Run chart-testing (lint)
         id: lint
-        uses: helm/chart-testing-action@v1.0.0-rc.1
+        # To-do: change back after https://github.com/helm/chart-testing-action/pull/28 is merged and new tag is released
+        uses: scottrigby/chart-testing-action@upgrade-image-v3.0.0-rc.1
         with:
           command: lint
           config: ct.yaml
@@ -24,7 +25,8 @@ jobs:
         if: steps.lint.outputs.changed == 'true'
 
       - name: Run chart-testing (install)
-        uses: helm/chart-testing-action@v1.0.0-rc.1
+        # To-do: change back after https://github.com/helm/chart-testing-action/pull/28 is merged and new tag is released
+        uses: scottrigby/chart-testing-action@upgrade-image-v3.0.0-rc.1
         with:
           command: install
           config: ct.yaml
