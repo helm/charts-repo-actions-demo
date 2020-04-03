@@ -33,6 +33,7 @@ jobs:
           helm repo add incubator https://kubernetes-charts-incubator.storage.googleapis.com/
 
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.0.0-rc.1
+        # To-do: once this passes ok in the PR, release new tag "helm/chart-releaser-action@v1.0.0-rc.2"
+        uses: helm/chart-releaser-action@master
         env:
           CR_TOKEN: "${{ secrets.CR_TOKEN }}"
