@@ -47,6 +47,26 @@ entries:
   dependencies-v1:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-08-11T01:17:43.397878096Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.5.13
+    description: Chart to test dependencies
+    digest: abc2ece774283edf821d0face0200be91a357426b83a7a8429193c3c41edca3e
+    home: https://github.com/helm/charts-repo-actions-demo
+    maintainers:
+    - email: email@example.com
+      name: Name
+    name: dependencies-v1
+    sources:
+    - https://github.com/helm/charts-repo-actions-demo
+    urls:
+    - https://github.com/helm/charts-repo-actions-demo/releases/download/dependencies-v1-0.1.5/dependencies-v1-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-08-10T22:18:26.615632176Z"
     dependencies:
     - condition: redis.enabled
@@ -106,6 +126,26 @@ entries:
     - https://github.com/helm/charts-repo-actions-demo/releases/download/dependencies-v1-0.1.2/dependencies-v1-0.1.2.tgz
     version: 0.1.2
   dependencies-v2:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2020-08-11T01:17:43.511847678Z"
+    dependencies:
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.5.13
+    description: Chart to test dependencies
+    digest: 2f79e1788def74158d733aba8b4c253a3ad3358b9c4454e022f0f6145b9173b3
+    home: https://github.com/helm/charts-repo-actions-demo
+    maintainers:
+    - email: email@example.com
+      name: Name
+    name: dependencies-v2
+    sources:
+    - https://github.com/helm/charts-repo-actions-demo
+    urls:
+    - https://github.com/helm/charts-repo-actions-demo/releases/download/dependencies-v2-0.1.5/dependencies-v2-0.1.5.tgz
+    version: 0.1.5
   - apiVersion: v2
     appVersion: "1.0"
     created: "2020-08-10T22:18:26.713284585Z"
@@ -194,6 +234,21 @@ entries:
   example-v1:
   - apiVersion: v1
     appVersion: "3.9"
+    created: "2020-08-11T01:17:43.626487361Z"
+    description: Deploy a basic Alpine Linux pod
+    digest: 1fed05dd63a8f93fdbcd1182c03f0e7a2ce1d8cef7772b908f7133094d699351
+    home: https://helm.sh/helm
+    maintainers:
+    - email: email@example.com
+      name: Name
+    name: example-v1
+    sources:
+    - https://github.com/helm/helm
+    urls:
+    - https://github.com/helm/charts-repo-actions-demo/releases/download/example-v1-0.1.8/example-v1-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v1
+    appVersion: "3.9"
     created: "2020-08-10T22:18:26.799994372Z"
     description: Deploy a basic Alpine Linux pod
     digest: 1b30709c7d3d9cb33541adbf5d013e1c638192c4a73fa81db1ae3942dbb000ab
@@ -238,6 +293,21 @@ entries:
     - https://github.com/helm/charts-repo-actions-demo/releases/download/example-v1-0.1.5/example-v1-0.1.5.tgz
     version: 0.1.5
   example-v2:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2020-08-11T01:17:43.742230147Z"
+    description: A Helm chart for Kubernetes
+    digest: 80a4b3f6d6701c682e65fd5605d8e47555a2b77a7bcfedaa9352d334cdd20c80
+    home: https://helm.sh/helm
+    maintainers:
+    - email: email@example.com
+      name: Name
+    name: example-v2
+    sources:
+    - https://github.com/helm/helm
+    urls:
+    - https://github.com/helm/charts-repo-actions-demo/releases/download/example-v2-0.2.5/example-v2-0.2.5.tgz
+    version: 0.2.5
   - apiVersion: v2
     appVersion: "1.0"
     created: "2020-08-10T22:18:26.883255783Z"
