@@ -11,6 +11,6 @@ sources:
 version: 0.1.6
 dependencies:
   - name: redis
-    version: 10.7.*
+    version: 10.7.17
     repository: https://charts.bitnami.com/bitnami
     condition: redis.enabled
