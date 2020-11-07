@@ -24,7 +24,7 @@ jobs:
           python-version: 3.7
 
       - name: Set up chart-testing
-        uses: unguiculus/chart-testing-action@master
+        uses: helm/chart-testing-action@master
         with:
           version: v3.3.0
 
