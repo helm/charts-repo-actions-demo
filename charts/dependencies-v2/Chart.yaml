@@ -8,7 +8,7 @@ maintainers:
 name: dependencies-v2
 sources:
   - https://github.com/helm/charts-repo-actions-demo
-version: 0.1.7
+version: 0.1.8
 dependencies:
   - name: redis
     version: 10.7.17

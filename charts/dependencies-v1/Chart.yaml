@@ -8,4 +8,4 @@ maintainers:
 name: dependencies-v1
 sources:
   - https://github.com/helm/charts-repo-actions-demo
-version: 0.1.7
+version: 0.1.8
