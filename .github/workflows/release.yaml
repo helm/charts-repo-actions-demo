@@ -22,7 +22,7 @@ jobs:
       - name: Install Helm
         uses: azure/setup-helm@v1
         with:
-          version: v3.4.1
+          version: v3.7.1
 
       # Optional step if GPG signing is used
       - name: Prepare GPG key
@@ -47,7 +47,7 @@ jobs:
           helm repo add bitnami https://charts.bitnami.com/bitnami
 
       - name: Run chart-releaser
-        uses: helm/chart-releaser-action@v1.1.0
+        uses: helm/chart-releaser-action@v1.2.0
         with:
           charts_dir: charts
           config: cr.yaml
