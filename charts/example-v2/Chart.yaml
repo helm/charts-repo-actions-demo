@@ -8,4 +8,4 @@ maintainers:
 name: example-v2
 sources:
   - https://github.com/helm/helm
-version: 0.2.7
+version: 0.2.8
