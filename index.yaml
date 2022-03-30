@@ -460,6 +460,21 @@ entries:
   example-v2:
   - apiVersion: v2
     appVersion: "1.0"
+    created: "2022-03-30T08:28:10.310341444Z"
+    description: A Helm chart for Kubernetes
+    digest: d4a23ad22c7a1a260757369daddcabd7fc72c56cd4a9b3266a97d101239f4ed4
+    home: https://helm.sh/helm
+    maintainers:
+    - email: email@example.com
+      name: Name
+    name: example-v2
+    sources:
+    - https://github.com/helm/helm
+    urls:
+    - https://github.com/helm/charts-repo-actions-demo/releases/download/example-v2-0.2.8/example-v2-0.2.8.tgz
+    version: 0.2.8
+  - apiVersion: v2
+    appVersion: "1.0"
     created: "2020-11-13T15:53:05.872231097Z"
     description: A Helm chart for Kubernetes
     digest: f962d422d830b2f3f25fb0f3e9618b4777c6733ea600837560ee99758a21d1f7
@@ -548,4 +563,4 @@ entries:
     urls:
     - https://github.com/helm/charts-repo-actions-demo/releases/download/example-v2-0.2.2/example-v2-0.2.2.tgz
     version: 0.2.2
-generated: "2019-12-08T02:57:21.985425597Z"
+generated: "2022-03-30T08:28:10.310585337Z"
