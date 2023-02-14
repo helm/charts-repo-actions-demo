@@ -26,4 +26,3 @@ spec:
     image: "alpine:{{ .Chart.AppVersion }}"
     command: ["/bin/sleep","9000"]
     
-    
