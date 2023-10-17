@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "{{.Release.Name}}-{{.Values.Name}}"
+  name: "{{.Release.Name}}-{{.Values.Name  }}"
   labels:
     # The "app.kubernetes.io/managed-by" label is used to track which tool
     # deployed a given chart. It is useful for admins who want to see what
